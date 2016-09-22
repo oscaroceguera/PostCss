@@ -93,7 +93,8 @@
 
   &-copy {
     &-title {
-      font-size: calc(var(--fontSize) * 3.5)
+      color: var(--bg-body);
+      font-size: responsive 32px 70px;
     }
 
     &-btn {
