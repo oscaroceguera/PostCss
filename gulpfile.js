@@ -3,6 +3,7 @@ var postcss = require('gulp-postcss')
 var cssnext = require('postcss-cssnext')
 var cssnested = require('postcss-nested')
 var mixins = require('postcss-mixins')
+var lost = require('lost')
 var atImport = require('postcss-import')
 var browserSync = require('browser-sync').create()
 
@@ -20,6 +21,7 @@ gulp.task('css', function () {
     atImport(),
     mixins(),
     cssnested,
+    lost(),
     cssnext({
       browsers: ['> 5%', 'ie 8']
     })
