@@ -7,6 +7,7 @@ var lost = require('lost')
 var csswring = require('csswring')
 var atImport = require('postcss-import')
 var rucksack = require('rucksack-css')
+var mqpacker = require('css-mqpacker')
 var browserSync = require('browser-sync').create()
 
 gulp.task('serve', function () {
@@ -28,6 +29,7 @@ gulp.task('css', function () {
     cssnext({
       browsers: ['> 5%', 'ie 8']
     }),
+    mqpacker(),
     csswring()
   ]
 
